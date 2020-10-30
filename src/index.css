@@ -1,13 +1,187 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fffffd;
+  color: #242424;
+}
+ul {
+  list-style-type: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a {
+  text-decoration: none;
+}
+.form {
+  display: flex;
+  width: 100%;
+} 
+.form input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #3f51b5;
+}
+.form button {
+  width: 30%;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #3f51b5;
+  color: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+.header {
+  background-color: #3f51b5;
+  margin: 0 0 30px 0;
+  padding: 20px 0;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+.nav-list__item {
+  margin-right: 20px;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+.trending {
+  list-style-type: none;
+  padding-left: 0;
+}
+.trending-item {
+  border-bottom: 1px solid #3f51b5;
+  border-left: 4px solid #3f51b5;
+  transition: all 0.3s;
+}
+.trending-item:hover {
+  border-left: 4px solid red;
+  border-bottom: 1px solid red;
+  cursor: pointer;
+}
+
+.trending-item__link {
+  color: #242424;
+  display: block;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  transition: all 0.3s;
+}
+.trending-item:hover .trending-item__link {
+  color: red;
+}
+.MovieDetails {
+  display: flex;
+  margin-bottom: 20px;
+}
+.MovieDetails-img {
+  width: 25%;
+  margin-right: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.22);
+}
+.MovieDetails-img img {
+  display: block;
+  width: 100%;
+}
+.MovieDetails-content {
+  width: 75%;
+}
+.MovieDetails-content h2 {
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+.MovieDetails-content__text {
+  display: flex;
+}
+.MovieDetails-content__block span,
+.MovieDetails-content__text span {
+  font-weight: bold;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.MovieDetails-content__block {
+  display: flex;
+}
+.MovieDetails-content__block p {
+  padding: 0 20px 0 0;
+  margin: 0;
+}
+.MovieDetails-btn {
+  padding: 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.22);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  margin-bottom: 40px;
+}
+.MovieDetails-btn a {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: red;
+}
+.reviews-list,
+.cast {
+  padding-left: 0;
+}
+.reviews-list__item,
+.cast-item {
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.22);
+}
+.reviews-list__title,
+.cast-item h2 {
+  font-size: 16px;
+  font-style: italic;
+}
+.button-back {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  padding: 12px 0;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+  background-color: #3f51b5;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.22);
+  border-radius: 50%;
+}
+.button-back:hover {
+  opacity: 0.8;
+}
+.overlay-spiner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
 }
